@@ -1,3 +1,4 @@
+from timeit import Timer
 def merge_sort(l):
     if len(l)>1:
         mid = len(l)//2
@@ -31,4 +32,6 @@ def merge_sort(l):
 
 x = [3,5,1,6,10,2]
 merge_sort(x)
-assert x == [1,2,3]
+assert x == [1,2,3,5,6,10]
+time_taken = Timer("merge_sort([3,1,2,4])", "from __main__ import merge_sort")
+print("time_taken",time_taken.timeit(number=1000), "milliseconds")
