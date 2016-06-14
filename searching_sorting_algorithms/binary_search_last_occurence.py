@@ -6,7 +6,7 @@ def binary_search_last_occurence(l,item):
     while first <= last:
         midpoint = (first+last)//2
         if  l[midpoint] == item:
-            result = l.index(item)
+            result = midpoint
             first = midpoint +1
         else:
             if item < l[midpoint]:

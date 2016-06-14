@@ -5,7 +5,7 @@ def binary_search(l,item):
         while first<=last:
             midpoint = (first + last)//2
             if l[midpoint] == item:
-                return l.index(item)
+                return midpoint
             else:
                 if item < l[midpoint]:
                     last = midpoint-1
