@@ -1,7 +1,7 @@
 def selection_sort(l):
-   for i in range(len(l)-1,0,-1):
+   for i in xrange(len(l)-1,0,-1):
        max_position=0
-       for j in range(1,i+1):
+       for j in xrange(1,i+1):
            if l[j]>l[max_position]:
                max_position = j
        l[i], l[max_position] = l[max_position],l[i]
